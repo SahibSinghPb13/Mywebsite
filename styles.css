@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Roboto';
+    overflow-x: hidden;
+}
+
+@media screen and (width < 280px) {
+    div.searchbar>div.speechiconbox {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    div.rightbar {
+        display: none !important;
+    }
+
+    div.searchbar {
+        width: fit-content;
+        justify-content: flex-end;
+        flex-grow: 1;
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    div.searchbar>:first-child {
+        max-width: 0;
+        transform: scaleX(0);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    div.searchbar>div.searchiconbox {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+}
+
+
+/*COMMONS------------------------------------------------------------*/
+.pointer:hover {
+    cursor: pointer;
+}
+
+.iconbox {
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.iconbox:hover {
+    cursor: pointer;
+    background-color: #272727;
+    transition: background-color 0.2s ease;
+}
+/*COMMONS------------------------------------------------------------*/
+
+
+/*NAVBAR START-------------------------------------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #0f0f0f;
+}
+/*navbar children start-----------------------------------------------*/
+
+/*LOGOBAR PARENT START------------------------------------------------*/
+.logobar {
+    height: 54px;
+    width: fit-content;
+    max-width: 169px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*logobar children start-----------------------------------------------*/
+.menubox>i {
+    height: 24px;
+    width: 24px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logobox {
+    height: 54px;
+    width: 123px;
+    min-width: 123px;
+    overflow: hidden;
+}
+
+.logobox>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+}
+/*logobar children ends------------------------------------------------*/
+/*LOGOBAR ENDS---------------------------------------------------------*/
+
+
+/*SEARCHBAR STARTS-----------------------------------------------------*/
+.searchbar {
+    height: 54px;
+    width: fit-content;
+    max-width: 732px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*searchbar children start----------------------------------------------*/
+.searchbox {
+    height: 40px;
+    width: 536px;
+    max-height: 40px;
+    max-width: 536px;
+    overflow: hidden;
+    transition: all 0.8s ease, opacity 0.8s ease;
+    transform-origin: right;
+}
+
+.searchbox>input {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: white;
+    padding-left: 0.8rem;
+    border-top-left-radius: 1.93rem;
+    border-bottom-left-radius: 1.93rem;
+    border: 2px solid #303030;
+    border-right: none;
+    background-color: #121212;
+}
+
+.searchbox>input:focus {
+    outline: none;
+    border: 2px solid blue;
+}
+
+.searchiconbox {
+    width: 64px;
+    height: 40px;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #303030;
+    border-top-right-radius: 1.93rem;
+    border-bottom-right-radius: 1.93rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: all 0.8s ease;
+}
+
+.searchiconbox>i {
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speechiconbox {
+    background-color: #222222;
+    margin-left: 0.9rem;
+}
+
+.speechiconbox>i {
+    height: 24px;
+    width: 24px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*searchbar children ends-----------------------------------------------*/
+/*SEARCHBAR ENDS--------------------------------------------------------*/
+
+
+/*RIGHTBAR START--------------------------------------------------------*/
+.rightbar {
+    height: 54px;
+    width: fit-content;
+    max-width: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightbar> :first-child {
+    margin-right: 1rem;
+}
+
+/* rightbar children start-----------------------------------------------*/
+.createbox {
+    width: 97.18px;
+    height: 36px;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 1.93rem;
+}
+
+.createbox> :first-child {
+    margin-right: 0.5rem;
+}
+
+.createbox:hover {
+    cursor: pointer;
+    background-color: #3f3f3f;
+    transition: background-color 0.2s ease;
+}
+
+.belliconbox>i {
+    height: 24px;
+    width: 24px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userbox {
+    height: 34px;
+    width: 60px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userbox>img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/*rightbar children ends-------------------------------------------------*/
+/*RIGHTBAR ENDS----------------------------------------------------------*/
+/*navbar children ends---------------------------------------------------*/
+/*NAVBAR ENDS------------------------------------------------------------*/
